@@ -1,0 +1,52 @@
+<body>
+  <mat-toolbar class="fxLayout dark" style="
+      width: 100%;
+      height: 80px;
+      flex-direction: row;
+      justify-content: space-between;
+      background-color: #ffac12;
+      color: ghostwhite;
+    ">
+    <div class="fxLaout" style="flex-direction: row; align-items: center;">
+      <mat-icon style="font-size: 50px; width: 50px; height: 50px;">
+        local_dining
+      </mat-icon>
+      <span>&nbsp;Food Content Center</span>
+    </div>
+    <div style="margin-left: 20px; margin-right: 20px;">
+      Status: Admin
+    </div>
+    <nav class="navbar">
+      <button class="nav-button" (click)="clickAll()">Home</button>
+      <button class="nav-button" [matMenuTriggerFor]="menu">Food categories</button>
+      <mat-menu #menu="matMenu" class="nav-button">
+        <button mat-menu-item *ngFor="let type of this.types" (click)="clickType(type.name)">
+          {{type.name}}
+        </button>
+      </mat-menu>
+      <button class="nav-button" (click)="order()">คำสั่งซื้อ</button>
+      <button class="nav-button" routerLink="/login" (click)="close()">ออกจากระบบ</button>
+      <mat-icon class="material-icons basket-icon" (click)="showPay()">
+        account_balance_wallet
+      </mat-icon>
+    </nav>
+  </mat-toolbar>
+
+  <div class="container">
+    <!-- container -->
+    <div id="food-box">
+      <mat-grid-list cols="5" rowHeight="300px">
+        <mat-grid-tile *ngFor="let food of this.foods" value="food" class="food-tile">
+          <div class="food-card">
+            <img src="{{food.pic}}" alt="{{food.name}}" width="200px" height="200px">
+            <div class="food-name">{{food.name}}</div>
+            <div class="food-price">{{food.price}} บาท</div>
+            <button mat-raised-button (click)="newEdit(food)" class="editbutton">
+              แก้ไข
+            </button>
+          </div>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,45 @@
+// *{
+//   padding: 0;
+//   margin: 0;
+//   box-sizing: border-box;
+// }
+
+.toolbar {
+  color: ghostwhite;
+  background: #3e7044;
+}
+
+.toolbar span {
+  font-size: 25px;
+  font-family: 'Prompt', sans-serif;
+}
+
+.toolbar button {
+  margin-left: 20px;
+  margin-right: 0px;
+  width: 100px;
+  height: 50px;
+  font-size: 18px;
+  color: ghostwhite;
+  border-radius: 80px;
+  font-family: 'Prompt', sans-serif;
+  background: rgba(15, 195, 8, 0.901);
+}
+
+
+.container {
+  width: 220px;
+  height: 200px;
+  position: relative;
+  border: 3px solid green;
+}
+
+.img {
+  text-align: center;
+}
+
+.label {
+  width: 100%;
+  text-align: center;
+  font-family: 'Prompt', sans-serif;
+}

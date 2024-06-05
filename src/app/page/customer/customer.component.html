@@ -1,0 +1,33 @@
+<body>
+  <header class="toolbar">
+    <div class="logo">
+      <i class="material-icons">local_dining</i>
+      <span>ตามสั่งโคตรแซ่บ</span>
+    </div>
+    <div class="status">Status: Customer</div>
+    <nav class="navbar">
+      <button class="nav-button" (click)="clickAll()">Home</button>
+      <button class="nav-button" [matMenuTriggerFor]="menu">Food categories</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item *ngFor="let type of this.types" (click)="clickType(type.name)">{{type.name}}</button>
+      </mat-menu>
+      <button class="nav-button" (click)="order()">Order</button>
+      <button class="nav-button" routerLink="/login" (click)="close()">Logout</button>
+      <i class="material-icons basket-icon" (click)="basketShow()">shopping_cart</i>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div id="food-box">
+      <mat-grid-list cols="5" rowHeight="300px">
+        <mat-grid-tile *ngFor="let food of this.foods" value="food" class="food-tile">
+          <div class="food-card" (click)="clickFid(food.fid)">
+            <img src="{{food.pic}}" alt="{{food.name}}" width="200px" height="200px">
+            <div class="food-name">{{food.name}}</div>
+            <div class="food-price">{{food.price}} บาท</div>
+          </div>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </main>
+</body>

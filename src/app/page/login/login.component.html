@@ -1,0 +1,25 @@
+<body>
+  <div class="container">
+    <div class="login-box">
+      <h2>Login</h2>
+      <form action="#">
+        <div class="input-box">
+          <input type="text" #username required>
+          <label>Username</label>
+        </div>
+        <div class="input-box">
+          <input type="password" #password required>
+          <label>Password</label>
+        </div>
+        <div class="forgot-pass"></div>
+      </form>
+      <div class="radio-box">
+        <input style="margin-left: 0%;" type="radio" id="customer" value="customer" name="check" (click)="clickcus()">
+        <label for="customer">Customer</label>
+        <input style="margin-left: 5%;" type="radio" id="admin" value="admin" name="check" (click)="clickad()">
+        <label for="admin">Admin</label>
+      </div>
+      <button type="submit" class="btn" (click)="login(username.value,password.value)">Login</button>
+    </div>
+  </div>
+  </body>

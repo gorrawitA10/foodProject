@@ -1,0 +1,21 @@
+<body>
+  <header class="toolbar">
+    <h1>สรุปคำสั่งซื้อ</h1>
+    <p>ราคารวม <span style="color: rgb(0, 0, 0);">{{this.price}} บาท</span></p>
+    <button class="pay-btn" mat-button mat-dialog-close (click)="pay(this.price)">ชำระเงิน</button>
+  </header>
+  <main class="grid-container">
+    <div class="grid">
+      <div *ngFor="let dd of this.data" class="grid-item">
+        <div class="container">
+          <img src="{{dd.pic}}" alt="{{dd.name}}" width="200" height="100">
+          <div class="label">
+            <span>{{dd.name}}</span>
+            <span>จำนวน {{dd.amount}} ชิ้น</span>
+            <span>ราคา {{dd.amount * dd.price}} บาท</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>

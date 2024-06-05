@@ -1,0 +1,23 @@
+<body>
+  <mat-toolbar class="toolbar">
+    <span>Cart</span>
+    <span style="flex: 1;"></span>
+    <label>ราคา : {{this.price}} </label>
+    <button mat-fab extended mat-dialog-close="" (click)="insertOrder()">สั่งอาหาร <mat-icon>add</mat-icon></button>
+  </mat-toolbar>
+  <mat-grid-list cols="5" rowHeight="300px">
+    <mat-grid-tile *ngFor="let basket of this.baskets" value="basket">
+      <div class="container">
+        <div class="img">
+          <img src="{{basket.pic}}" width="200px" height="100px" class="img">
+          <div class="label">
+            <span>{{basket.name}}</span><br>
+            <span><input type="number" #amount id="{{basket.amount}}" value="{{basket.amount}}" style="width: 40px; height: 20px;"> ชิ้น</span>
+          </div>
+          <button mat-button mat-dialog-close class="btn-delete" (click)="delete(basket.fid,basket.cusid)">ลบ</button> <br>
+          <button mat-button mat-dialog-close class="btn-edit" (click)="edit(basket.cusid, basket.fid, amount.value)">แก้ไข</button>
+        </div>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</body>

@@ -1,0 +1,92 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.toolbar {
+  color: #fff;
+  font-size: 1.8rem;
+  font-family: 'Prompt', sans-serif;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  background-image: url("https://t3.ftcdn.net/jpg/02/90/89/76/360_F_290897614_7RdAsk2GmumcGWZ2qklmV74hKlNmznSx.jpg");
+}
+
+.toolbar span:first-child {
+  margin-right: auto;
+}
+
+.toolbar label {
+  margin-left: 2rem;
+  font-size: 1.2rem;
+  margin-right: 3rem;
+}
+
+.toolbar button {
+  font-size: 1.2rem;
+  color: #fff;
+  font-family: 'Prompt', sans-serif;
+  background: rgba(255, 221, 27, 0.901);
+  border: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.toolbar button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+  width: 290px;
+  height: 290px;
+  position: relative;
+  border: 3px solid rgb(255, 204, 36);
+  font-family: 'Prompt', sans-serif;
+}
+
+.img {
+  text-align: center;
+}
+
+.label {
+  width: 100%;
+  text-align: center;
+}
+
+.btn-delete {
+  width: 50%;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #fff;
+  background-color: #f44336;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-delete:hover {
+  background-color: #d32f2f;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, )
+}
+.btn-edit{
+  width: 50%;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #fff;
+  background-color: #ffdb10;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}

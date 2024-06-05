@@ -1,0 +1,133 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(255, 203, 135);
+  background-size: cover;
+}
+
+.toolbar {
+  width: 100%;
+  height: 80px;
+  background-image: linear-gradient(180deg, #3e7044, #1d5327, #529854);
+  color: rgb(248, 254, 255);
+  top: 0;
+  z-index: 1000;
+  font-family: 'Prompt', sans-serif;
+}
+
+.img-top {
+  width: 100%;
+  height: 100px;
+  align-items: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+// #food-box {
+//   padding: 70px;
+//   background-image: url("https://i.pinimg.com/564x/c7/b5/d0/c7b5d0c16a265399363119b40861c940.jpg");
+//   background-size: cover;
+//   background-position: center;
+// }
+
+
+.btn-food {
+  display: table-cell;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.btn-food .mat-mdc-div-base {
+  margin: 8px 8px 8px 0;
+}
+
+.fxLaout {
+  position: relative;
+  display: flex;
+}
+
+.btn-toolbar {
+  font-size: 18px;
+  font-family: 'Itim', cursive;
+  font-family: 'Prompt', sans-serif;
+  margin-bottom: 20px;
+}
+
+.icon {
+  width: 40px;
+  height: 100%;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.food-card {
+  display: flex;
+  flex-direction: column;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/002/758/337/non_2x/video-game-cartoon-vector.jpg");
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 40px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  border: 5px solid #cec3c3;
+  padding: 10px;
+
+  }
+
+  .food-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid #d3d3d3;
+  margin-bottom: 24px;
+  margin-top: 6px;
+  }
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.nav-button {
+  margin: 5px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-family: 'Itim', cursive;
+  background-color: #fff;
+  color: #f78214;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-button:hover {
+  background-color: #f78214;
+  color: #fff;
+}
+
+.editbutton {
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Prompt', sans-serif;
+  margin: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 50%; height: 25px;
+}
+
+.editbutton:hover {
+  background: rgba(255, 213, 3, 0.8);
+}

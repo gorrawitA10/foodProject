@@ -1,0 +1,42 @@
+.toolbar {
+  background-image: url("https://i.pinimg.com/736x/a1/c8/92/a1c892fbf9900a1747223cef72d55d93.jpg");
+  color: ghostwhite;
+}
+.toolbar .spacer {
+  flex: 1;
+}
+.toolbar .title {
+  font-size: 25px;
+  font-family: 'K2D', sans-serif;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 16px;
+  margin-top: 20px;
+  background-color: #FF8200;
+}
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+.center-align {
+  text-align: center;
+}
+.show-btn {
+  color: rgb(255, 216, 21);
+  background: #ffffff;
+  font-size: 16px;
+}
+.pickup-btn {
+  background: #ffffff;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+}
+.block-button {
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 5px;
+}

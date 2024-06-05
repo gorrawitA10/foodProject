@@ -1,0 +1,17 @@
+<body>
+  <mat-grid-list cols="1" rowHeight="300px">
+    <mat-grid-tile *ngFor="let food of this.foods" value="food">
+        <div class="container">
+          <div class="img">
+            <img src="{{food.pic}}" width="200px" height="200px" style="margin: 0;">
+            <div class="label">
+              {{food.name}}
+              {{food.price}} บาท
+            </div>
+            <button mat-button class="btn1">แก้ไข</button>
+            <button mat-button class="btn2">ลบ</button>
+          </div>
+        </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</body>

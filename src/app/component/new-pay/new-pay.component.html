@@ -1,0 +1,10 @@
+<body>
+  <div class="container">
+    <h2>ยืนยันการชำระเงิน</h2>
+    <h2>จำนวน {{data.price}} บาท</h2>
+    <div class="btn">
+      <button mat-dialog-close mat-button class="confirm-btn" (click)="thanks(data.price,data.oid)">ยืนยัน</button>
+      <button mat-dialog-close mat-button class="cancel-btn">ยกเลิก</button>
+    </div>
+  </div>
+</body>

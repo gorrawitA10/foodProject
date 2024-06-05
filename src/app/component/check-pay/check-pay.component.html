@@ -1,0 +1,12 @@
+<body>
+  <header>
+    <h1>ยืนยันการรับอาหาร</h1>
+  </header>
+  <div class="container">
+    <label>{{this.name}}</label>
+    <div class="buttons">
+      <button class="btn confirm-btn" mat-dialog-close [disabled]="this.check" (click)="dee()">ยืนยัน</button>
+      <button class="btn cancel-btn" mat-dialog-close>ยกเลิก</button>
+    </div>
+  </div>
+</body>

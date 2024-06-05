@@ -1,0 +1,57 @@
+<body>
+  <mat-toolbar class="toolbar">
+    <span style="flex: 1;"></span>
+    <span><p>รายการ</p></span>
+    <span style="flex: 1;"></span>
+  </mat-toolbar>
+  <table mat-table [dataSource]="this.orders">
+    <ng-container matColumnDef="oid">
+      <th mat-header-cell *matHeaderCellDef style="text-align: center;">รหัสคำสั่งซื้อ</th>
+      <td mat-cell *matCellDef="let element" style="text-align: center;">{{element.oid}}</td>
+    </ng-container>
+    <ng-container matColumnDef="cusid">
+      <th mat-header-cell *matHeaderCellDef style="text-align: center;">รหัสผู้ใช้</th>
+      <td mat-cell *matCellDef="let element" style="text-align: center;">{{element.cusid}}</td>
+    </ng-container>
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef style="text-align: center;">สถานะอาหาร</th>
+      <td mat-cell *matCellDef="let element" style="text-align: center;">
+        <button
+        mat-flat-button
+        [matMenuTriggerFor]="menu"
+        >
+        {{element.name}}
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item *ngFor="let status of this.status"
+        (click)="edit(status.sid, element.oid)"
+        >
+          {{status.name}}
+        </button>
+      </mat-menu>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="statusPay">
+      <th mat-header-cell *matHeaderCellDef style="text-align: center;">สถานะการชำระเงิน</th>
+      <td mat-cell *matCellDef="let element" style="text-align: center;">{{element.namee}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="sumprice">
+      <th mat-header-cell *matHeaderCellDef style="text-align: center;">ราคา</th>
+      <td mat-cell *matCellDef="let element" style="text-align: center;">{{element.sumprice}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="show">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-button mat-dialog-close (click)="showbasket(element.oid)"
+        style="font-size: 16px; background: #3e7044; color: white;">
+          Show
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="['oid', 'cusid', 'status', 'statusPay','sumprice', 'show']"></tr>
+    <tr mat-row *matRowDef="let row; columns: ['oid', 'cusid', 'status', 'statusPay', 'sumprice',  'show'];"></tr>
+  </table>
+</body>
